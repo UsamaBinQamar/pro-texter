@@ -52,8 +52,8 @@ export default function SentenceRephraser() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
-      <div className="w-full max-w-3xl bg-white shadow-lg rounded-lg p-6">
+    <div className="min-h-screen bg-gray-900 flex items-center justify-center p-4">
+      <div className="w-full max-w-3xl bg-white shadow-lg rounded-lg p-6  justify-items-center">
         <h1 className="text-3xl font-bold text-center text-gray-800 mb-2">
           Text Transformer
         </h1>
@@ -64,19 +64,19 @@ export default function SentenceRephraser() {
           value={inputText}
           onChange={(e) => setInputText(e.target.value)}
           placeholder="Enter your text here"
-          className="w-full min-h-[100px] p-4 text-lg border border-gray-300 rounded-lg mb-4"
+          className="min-w-96 min-h-[100px] p-4 text-lg border border-gray-300 rounded-lg mb-4"
         />
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 mb-6">
           {[
             { tone: "funny", color: "pink" },
-            { tone: "professional", color: "blue" },
+            { tone: "professional", color: "cyan" },
             { tone: "sarcastic", color: "purple" },
             { tone: "poetic", color: "green" },
             { tone: "motivational", color: "yellow" },
-            { tone: "casual", color: "indigo" },
+            { tone: "casual", color: "yellow" },
             { tone: "academic", color: "red" },
             { tone: "dramatic", color: "orange" },
-            { tone: "minimalist", color: "gray" },
+            { tone: "minimalist", color: "cyan" },
             { tone: "empathetic", color: "teal" },
             { tone: "grammerly", color: "cyan" },
           ].map(({ tone, color }) => (
@@ -84,11 +84,14 @@ export default function SentenceRephraser() {
               key={tone}
               onClick={() => handleToneChange(tone)}
               disabled={isLoading || !inputText.trim()}
-              className={`bg-${color}-500 hover:bg-${color}-600 text-black font-semibold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:scale-105 disabled:opacity-50 text-sm`}
+              style={{ backgroundColor: color, color: "black" }}
+              className={`  font-semibold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:scale-105 disabled:opacity-50 text-sm`}
             >
-              {isLoading
-                ? "Transforming..."
-                : `${tone.charAt(0).toUpperCase() + tone.slice(1)}  `}
+              <span style={{ backgroundColor: color, color: "black" }}>
+                {isLoading
+                  ? "Transforming..."
+                  : `${tone.charAt(0).toUpperCase() + tone.slice(1)}  `}
+              </span>
             </button>
           ))}
         </div>
