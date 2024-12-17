@@ -55,11 +55,11 @@ export default function SentenceRephraser() {
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
       <div className="w-full max-w-3xl bg-white shadow-lg rounded-lg p-6">
         <h1 className="text-3xl font-bold text-center text-gray-800 mb-2">
-          Sentence Tone Transformer
+          Text Transformer
         </h1>
-        <p className="text-center text-gray-600 mb-6">
-          Enter your text and choose a tone to transform it
-        </p>
+        {/* <p className="text-center text-gray-600 mb-6">
+          Transform your text by selecting a desired tone.
+        </p> */}
         <textarea
           value={inputText}
           onChange={(e) => setInputText(e.target.value)}
