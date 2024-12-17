@@ -23,17 +23,17 @@ export default function SentenceRephraser() {
       const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
       const tonePrompts = {
-        funny: `Rephrase this sentence in a hilarious, witty tone: "${inputText}"`,
-        professional: `Rephrase this sentence in a formal, corporate professional tone: "${inputText}"`,
-        sarcastic: `Rephrase this sentence with maximum sarcasm and subtle mockery: "${inputText}"`,
-        poetic: `Transform this sentence into a lyrical, metaphorical poetic expression: "${inputText}"`,
-        motivational: `Rewrite this sentence as an inspiring, empowering motivational statement: "${inputText}"`,
-        casual: `Rephrase this sentence in a relaxed, friendly, conversational way: "${inputText}"`,
-        academic: `Rephrase this sentence in a scholarly, intellectually rigorous academic tone: "${inputText}"`,
-        dramatic: `Dramatically amplify this sentence with intense emotional language: "${inputText}"`,
-        minimalist: `Distill this sentence to its most essential, concise form: "${inputText}"`,
-        empathetic: `Rephrase this sentence with deep emotional understanding and compassion: "${inputText}"`,
-        grammerly: `Correct and improve the grammar, sentence structure, and clarity of this text. Ensure it is grammatically perfect while maintaining the original meaning: "${inputText}"`,
+        funny: `You are AI my assistant that can change the tone of the sentence. Don't change the meaning of the sentence. Only change the tone of the sentence. don't convert too much length of the sentence and give only one sentence.  Rephrase this sentence in a hilarious, witty tone here is sentence "${inputText}"`,
+        professional: `You are AI my assistant that can change the tone of the sentence. Don't change the meaning of the sentence. Only change the tone of the sentence. don't convert too much length of the sentence and give only one sentence Rephrase this sentence in a formal, corporate professional tone here is sentence "${inputText}"`,
+        sarcastic: `You are AI my assistant that can change the tone of the sentence. Don't change the meaning of the sentence. Only change the tone of the sentence. don't convert too much length of the sentence and give only one sentence Rephrase this sentence with maximum sarcasm and subtle mockery here is sentence "${inputText}"`,
+        poetic: `You are AI my assistant that can change the tone of the sentence. Don't change the meaning of the sentence. Only change the tone of the sentence. don't convert too much length of the sentence and give only one sentence Transform this sentence into a lyrical, metaphorical poetic expression here is sentence "${inputText}"`,
+        motivational: `You are AI my assistant that can change the tone of the sentence. Don't change the meaning of the sentence. Only change the tone of the sentence. don't convert too much length of the sentence and give only one sentence Rewrite this sentence as an inspiring, empowering motivational statement here is sentence "${inputText}"`,
+        casual: `You are AI my assistant that can change the tone of the sentence. Don't change the meaning of the sentence. Only change the tone of the sentence. don't convert too much length of the sentence and give only one sentence Rephrase this sentence in a relaxed, friendly, conversational way here is sentence "${inputText}"`,
+        academic: `You are AI my assistant that can change the tone of the sentence. Don't change the meaning of the sentence. Only change the tone of the sentence. don't convert too much length of the sentence and give only one sentence Rephrase this sentence in a scholarly, intellectually rigorous academic tone here is sentence "${inputText}"`,
+        dramatic: `Dramatically amplify this sentence with intense emotional language here is sentence "${inputText}"`,
+        minimalist: `You are AI my assistant that can change the tone of the sentence. Don't change the meaning of the sentence. Only change the tone of the sentence. don't convert too much length of the sentence and give only one sentence You are AI my assistant that can change the tone of the sentence. Don't change the meaning of the sentence. Only change the tone of the sentence. don't convert too much length of the sentence and give only one sentence Distill this sentence to its most essential, concise form here is sentence"${inputText}"`,
+        empathetic: `You are AI my assistant that can change the tone of the sentence. Don't change the meaning of the sentence. Only change the tone of the sentence. don't convert too much length of the sentence and give only one sentenceRephrase this sentence with deep emotional understanding and compassion: "${inputText}"`,
+        grammerly: `You are AI my assistant that can change the tone of the sentence. Don't change the meaning of the sentence. Only change the tone of the sentence. don't convert too much length of the sentence and give only one sentence Correct and improve the grammar, sentence structure, and clarity of this text. Ensure it is grammatically perfect while maintaining the original meaning here is sentence "${inputText}"`,
       };
 
       const prompt = tonePrompts[tone];
