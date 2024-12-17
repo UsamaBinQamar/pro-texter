@@ -6,7 +6,7 @@ import { useState } from "react";
 export default function SentenceRephraser() {
   const [inputText, setInputText] = useState("");
   const [outputText, setOutputText] = useState("");
-  const apiKey = "AIzaSyDFLbRDL-_obXy6qn2U5xXhqaWEcn1pQVU"; // Replace with your actual API key
+  const apiKey = "AIzaSyDFLbRDL-_obXy6qn2U5xXhqaWEcn1pQVU";
 
   const handleToneChange = async (tone) => {
     try {
