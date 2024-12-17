@@ -52,6 +52,7 @@ export default function SentenceRephraser() {
             className="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:scale-105 disabled:opacity-50"
           >
             {/* {isLoading ? "Loading..." : "Funny Tone"} */}
+            Funny Tone
           </button>
           <button
             onClick={() => handleToneChange("professional")}
@@ -59,6 +60,7 @@ export default function SentenceRephraser() {
             className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:scale-105 disabled:opacity-50"
           >
             {/* {isLoading ? "Loading..." : "Professional Tone"} */}
+            Professional Tone
           </button>
         </div>
         <div className="w-full">
