@@ -20,9 +20,9 @@ function App() {
 
       let prompt;
       if (tone === "funny") {
-        prompt = `hey convert this sentence into funny tone don't convert into long here is sentence "${inputText}"`;
+        prompt = `you are AI rephraser just convert this sentence into funny tone don't convert into long sentence here is sentence "${inputText}"`;
       } else if (tone === "professional") {
-        prompt = `hey convert this sentence into professional tone don't convert into long here is sentence "${inputText}"`;
+        prompt = `you are AI rephraser just convert this sentence into professional tone don't convert into long sentence here is sentence "${inputText}"`;
       } else {
         return; // Handle invalid tone
       }
