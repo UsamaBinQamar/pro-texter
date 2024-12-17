@@ -33,6 +33,7 @@ export default function SentenceRephraser() {
         dramatic: `Dramatically amplify this sentence with intense emotional language: "${inputText}"`,
         minimalist: `Distill this sentence to its most essential, concise form: "${inputText}"`,
         empathetic: `Rephrase this sentence with deep emotional understanding and compassion: "${inputText}"`,
+        grammerly: `Correct and improve the grammar, sentence structure, and clarity of this text. Ensure it is grammatically perfect while maintaining the original meaning: "${inputText}"`,
       };
 
       const prompt = tonePrompts[tone];
@@ -77,17 +78,17 @@ export default function SentenceRephraser() {
             { tone: "dramatic", color: "orange" },
             { tone: "minimalist", color: "gray" },
             { tone: "empathetic", color: "teal" },
+            { tone: "grammerly", color: "cyan" },
           ].map(({ tone, color }) => (
             <button
               key={tone}
               onClick={() => handleToneChange(tone)}
               disabled={isLoading || !inputText.trim()}
-              style={{ backgroundColor: color }}
               className={`bg-${color}-500 hover:bg-${color}-600 text-black font-semibold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:scale-105 disabled:opacity-50 text-sm`}
             >
               {isLoading
                 ? "Transforming..."
-                : `${tone.charAt(0).toUpperCase() + tone.slice(1)} Tone`}
+                : `${tone.charAt(0).toUpperCase() + tone.slice(1)}  `}
             </button>
           ))}
         </div>
