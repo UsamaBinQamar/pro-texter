@@ -7,7 +7,7 @@ export default function SentenceRephraser() {
   const [inputText, setInputText] = useState("");
   const [outputText, setOutputText] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const apiKey = "AIzaSyDFLbRDL-_obXy6qn2U5xXhqaWEcn1pQVU";
+  const apiKey = process.env.NEXT_PUBLIC_GEMINI_GEMINI_API_KEY;
 
   const handleToneChange = async (tone) => {
     if (!inputText.trim()) {
